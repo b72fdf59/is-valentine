@@ -1,7 +1,4 @@
-<script>
-	import { tweened } from "svelte/motion";
-	import { onDestroy } from 'svelte';
-
+<script lang="ts">
 	let isValentine = false;
 	let fontSize = "1em";
 
@@ -13,15 +10,12 @@
 		isValentine = true;
 	};
 
-	let hearts = new Array(100).fill().map((_, i) => {
-		return {
-			id: i,
-			x: Math.random() * 100,
-			y: Math.random() * 100,
-		};
-	});
+	let hearts = Array.from({ length: 100 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+  }));
 </script>
-
 <main>
 	<div class="container">
 		<div class="content">

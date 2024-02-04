@@ -44,7 +44,6 @@
 			<div
 				class="heart"
 				style="left: {heart.x}%; top: {heart.y}%;"
-				key={heart.id}
 			>
 				❤️
 			</div>
